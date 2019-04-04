@@ -33,29 +33,33 @@ $(function () {
     var windowSize = $(window).width(); // Largeur de l'écran pour gérer le responsive
 
     if (windowSize > 991) {
-        $('.navbar').css('background-color', 'rgba(0, 0, 0, 0)');
-        $('.nav-link').css('background-color', 'rgba(0, 0, 0, 0)');
-        $('.dropdown-menu').css('background-color', 'rgba(0, 0, 0, 0)');
-        $('.dropdown-item').css('background-color', 'rgba(0, 0, 0, 0)');
-        $('#logo_navbar').css('display', 'none');
+        $('.nav-item').css('margin-left', '15px');
+        $('.nav-item').css('margin-right', '15px');
+        $(".nav-link").hover(
+            function () {
+                $(this).css("background-color", "rgba(25, 0, 0, 1)");
+            },
+            function () {
+                $(this).css("background-color", "rgba(0, 0, 0, 0)");
+            }
+        );
+        $(".dropdown-item").hover(
+            function () {
+                $(this).css("background-color", "rgba(25, 0, 0, 1)");
+            },
+            function () {
+                $(this).css("background-color", "rgba(0, 0, 0, 0)");
+            }
+        );
         $(window).scroll(function () {
             // these conditional statements are working fine
             if ($(window).scrollTop() > 500) {
-                $('.navbar').css("background-color", "rgba(158, 0, 0, 0.5)");
-                $('.nav-link').css('background-color', 'rgba(158, 0, 0, 0.5)');
-                $('.dropdown-menu').css('background-color', 'rgba(158, 0, 0, 0.5)');
-                $('.dropdown-item').css('background-color', 'rgba(158, 0, 0, 0.5)');
-                $('#logo_navbar').css('display', 'block');
+                $('.nav-item').css('margin-left', '15px');
+                $('.nav-item').css('margin-right', '15px');
             } else {
-                $('.navbar').css('background-color', 'rgba(0, 0, 0, 0)');
-                $('.nav-link').css('background-color', 'rgba(0, 0, 0, 0)');
-                $('#logo_navbar').css('display', 'none');
-                $('.dropdown-menu').css('background-color', 'rgba(0, 0, 0, 0)');
-                $('.dropdown-item').css('background-color', 'rgba(0, 0, 0, 0)');
-
                 $(".nav-link").hover(
                     function () {
-                        $(this).css("background-color", "rgba(158, 0, 0, 0.8)");
+                        $(this).css("background-color", "rgba(25, 0, 0, 1)");
                     },
                     function () {
                         $(this).css("background-color", "rgba(0, 0, 0, 0)");
@@ -63,7 +67,7 @@ $(function () {
                 );
                 $(".dropdown-item").hover(
                     function () {
-                        $(this).css("background-color", "rgba(158, 0, 0, 0.8)");
+                        $(this).css("background-color", "rgba(25, 0, 0, 1)");
                     },
                     function () {
                         $(this).css("background-color", "rgba(0, 0, 0, 0)");

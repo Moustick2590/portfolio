@@ -26,9 +26,9 @@ body header {
   background: #222;
   background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
   background-size: 250% 100%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
 }
 body header #navBar {
   position: fixed;
@@ -37,7 +37,7 @@ body header #navBar {
   height: 9vh;
 }
 body header #navBar .navbar {
-  background-color: rgba(205, 0, 0, 0.5);
+  background-color: rgba(102, 0, 0, 0.9);
 }
 @media only screen and (max-width: 991px) {
   body header #navBar .navbar {
@@ -51,32 +51,32 @@ body header #navBar .navbar #logo_lien {
 body header #navBar .navbar #logo_lien #logo_navbar {
   height: 7vh;
 }
+body header #navBar .navbar ul li {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 body header #navBar .navbar ul li .nav-link {
   color: white;
   font-size: 1.2rem;
-  background-color: rgba(205, 0, 0, 0.5);
-  box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
 }
 body header #navBar .navbar ul li .nav-link:hover {
   color: white;
   text-decoration: none;
-  background-color: rgba(25, 0, 0, 0.8);
+  background-color: #190000;
 }
-body header #navBar .navbar ul li .dropdown-menu {
-  background-color: rgba(205, 0, 0, 0.5);
+body header #navBar .navbar ul .dropdown-menu {
+  background-color: rgba(102, 0, 0, 0.9);
 }
-body header #navBar .navbar ul li .dropdown-menu .dropdown-item {
+body header #navBar .navbar ul .dropdown-menu .dropdown-item {
   color: white;
   font-size: 1.2rem;
-  background-color: rgba(205, 0, 0, 0.5);
-  box-shadow: inset 0.3rem 0.3rem 0.3rem 0 rgba(255, 130, 90, 0.2), 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
 }
-body header #navBar .navbar ul li .dropdown-menu .dropdown-item:hover {
+body header #navBar .navbar ul .dropdown-menu .dropdown-item:hover {
   color: white;
   text-decoration: none;
-  background-color: rgba(25, 0, 0, 0.8);
+  background-color: #190000;
 }
 body header #navBar .navbar .navbar-toggler {
   margin: 3vh 0 0 1vh;
@@ -86,38 +86,6 @@ body header #navBar .navbar .navbar-toggler .navbar-toggler-icon {
   border-color: black;
   background-image: url(../img/logo_AC.png);
   background-size: contain;
-}
-body header #navBar .center {
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-@media only screen and (max-width: 991px) {
-  body header #navBar .center {
-    display: none;
-  }
-}
-body header #navBar .triangle-down {
-  position: fixed;
-  width: 0;
-  height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 30px solid transparent;
-}
-body header #navBar .triangle-down p {
-  text-align: center;
-  color: rgba(255, 130, 90, 0.5);
-  font-size: 1.5rem;
-  margin-top: -33px;
-  margin-left: -13px;
-  transition: color 0.2s;
-  text-shadow: 0 0.5rem 0.5rem rgba(255, 130, 90, 0.5), 0 1rem 0.5rem rgba(170, 90, 30, 0.5), 0 1rem 0.3rem rgba(128, 0, 0, 0.5);
-}
-body header #navBar .triangle-down p:hover {
-  color: white;
 }
 body header #logo_présentation {
   min-height: 100vh;
@@ -156,9 +124,9 @@ body #presentation {
   background: #222;
   background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
   background-size: 200% 200%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
 }
 @media only screen and (max-width: 991px) {
   body #presentation .compet {
@@ -190,9 +158,9 @@ body #portfolio {
   background: #222;
   background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
   background-size: 200% 200%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
 }
 body #portfolio figure {
   overflow: hidden;
@@ -267,9 +235,9 @@ body #projet {
   background: #222;
   background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
   background-size: 250% 100%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
 }
 body #projet .img_desktop {
   margin: 5vh 0;
@@ -320,9 +288,9 @@ body #form_map {
   background: #222;
   background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
   background-size: 200% 200%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
 }
 body #form_map #map {
   min-height: 50vh;

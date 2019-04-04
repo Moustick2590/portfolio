@@ -1,0 +1,13 @@
+{
+    "name": "portfolio",
+    "description": "mon portfolio",
+    "authors": [
+        {
+            "name": "Aurélien",
+            "email": "aurel.caillaud@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "2.0"
+    }
+}

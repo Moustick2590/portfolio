@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+{% block link %}
+<link crossorigin="" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    rel="stylesheet" />
+{% endblock %}
+{% block header %}
+{#
+<!-- //////////////////////////////////////////////////Block Header///////////////////////////////////////////////////////////////// -->
+#}
+<div class="container d-flex align-items-center" id="logo_présentation">
+    <div class="row justify-content-around align-items-center">
+    <h1 class='text-center'>Aurélien Caillaud</h1>
+    <img alt="mon logo" class="img-fluid" height="755" id="logo_accueil" src="public/img/logo_AC.png"
+                width"599">
+                <h2 class="text-center">Développeur<br>Web</h2>
+        <div class="col-10 col-md-5">
+            
+        </div>
+        <div class="col-10 col-md-7 " id="titre">
+            
+            
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block contenu %}
+{#
+<!-- //////////////////////////////////////////////////Block Contenu///////////////////////////////////////////////////////////////// -->
+#}
+<section class="container-fluid" id="presentation">
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-10 col-md-6 ">
+                <h2>Je me présente :</h2>
+                <p>Anciennement électricien, j'ai souhaité me reconvertir en tant que développeur web. J'ai toujours
+                    été attiré par le monde du web et de l'informatique en général.</p>
+                    <p>Pour ma reconvertion professionnelle, j'ai intégré la formation :</p>
+                    <a href="https://www.accesscodeschool.fr/" target="_blank">Acces Code School</a>
+                    <p>Je souhaite me perfectionner dans ce domaine et plus particulièrement avec la technologie
+                    JavaScript.
+                    Je suis persévérant, autonome, sociable et je m'adapte à toutes les situations.</p>
+                    <p>Vous pouvez télécharger :</p>
+                    <a href="public/img/Mon_CV.pdf" download="Mon_CV">Mon CV</a>
+                
+            </div>
+            <div class="col-10 col-md-6 ">
+                <h2 class="compet">Mes compétences :</h2>
+                <ul id="competences">
+                    
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Sass</li>
+                    <li>Bootstrap 4</li>
+                    <li>JavaScript / jQuery </li>
+                    <li>Photoshop / Gimp - Illustrator / Inkscape</li>
+                    <li>PHP 7 / Twig</li>
+                    <li>MySQL</li>
+                    <li>PhpMyAdmin / Adminer</li>
+                    <li>Github</li>
+                    <li>Linux</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid " id="portfolio">
+    <div class="container">
+        <h2>Mes Projets :</h2>
+        <div class="row justify-content-around">
+            {% for data in projets %}
+            <figure class="col-10 col-md-5 projet">
+                <img alt="image du projet" class="img-fluid" height="967" src="public/img/{{data.img_desktop}}" width="1905">
+                <figcaption>
+                    <ul>
+                        <li class="nom_projet">
+                            <h2>
+                                {{data.nom}}</h2>
+                        </li>
+                        <li class="description_projet">
+                            {{data.description}}
+                        </li>
+                        <li class="contrib_projet">
+                            {{data.contributeurs}}
+                        </li>
+                        <li class="lien_page_projet">
+                            <a href="{{ sub_path }}/{{data.nom}}">En savoir plus</a>
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            {% endfor %}
+            {# <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for projet in data %}
+
+                    <div class="carousel-item active">
+                        <figure class="col-md-4 projet">
+                            <img class="img-fluid" alt="image du projet" src="public/img/{{projet.img_desktop}}" width="1905"
+                                height="967">
+                            <figcaption>
+                                <ul>
+                                    <li class="nom_projet">
+                                        <h2>{{projet.nom}}</h2>
+                                    </li>
+                                    <li class="description_projet">
+                                        {{projet.description}}
+                                    </li>
+                                    <li class="contrib_projet">
+                                        {{projet.contributeurs}}
+                                    </li>
+                                    <li class="lien_projet">
+                                        <a href="/portfolio/{{projet.nom}}">En savoir plus</a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+
+                        {% endfor %}
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div> #}
+        {# <div class="row">
+            {% for i in range (2,3) %}
+
+
+            <figure class="col-md-4 projet">
+                <img class="img-fluid" alt="image du projet" src="public/img/{{projet.img_desktop}}" width="1905"
+                    height="967">
+                <figcaption>
+                    <ul>
+                        <li class="nom_projet">
+                            {{projet.nom}}
+                        </li>
+                        <li class="description_projet">
+                            {{projet.description}}
+                        </li>
+                        <li class="contrib_projet">
+                            {{projet.contributeurs}}
+                        </li>
+                        <li class="lien_projet">
+                            <a href="/portfolio/{{projet.nom}}">En savoir plus</a>
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            {% endfor %}
+
+            #}
+        </div>
+</section>
+<section class="container-fluid" id="form_map">
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-10 col-md-6" id="form_contact">
+                <h2>Contactez moi par mail :</h2>
+                <span id="msg_all"></span>
+                <form action="process.php" id="contact" class="d-flex flex-column align-items-center" method="POST">
+                    <label class="nom" for="nom">Votre Nom</label>
+                    <input id="nom" name="nom" type="text">
+                    <span id="msg_nom"></span>
+                    <label for="email">Votre Email</label>
+                    <input id="email" name="email" type="email">
+                    <span id="msg_email"></span>
+                    <label class="sujet" for="sujet">Le Sujet</label>
+                    <input id="sujet" name="sujet" type="text">
+                    <span id="msg_sujet"></span>
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="10"></textarea>
+                    <span id="msg_message"></span>
+                    <input type="submit" id="envoi_mail" value="Envoyer le mail" />
+                </form>
+            </div>
+            <!-- end of #form_contact -->
+            <div alt="carte géographique" class="col-10 col-md-6" id="map"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block script %}
+<script crossorigin="" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="public/js/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="public/js/navbar.js"></script>
+<script src="public/js/accueil.js"></script>
+{% endblock %}

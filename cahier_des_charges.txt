@@ -1,0 +1,33 @@
+Cahier des charges pour mon portfolio
+
+
+1: Les pages : nombre de section et description
+5 sections: Header, Main (comprends 3 sections) et le Footer
+    Header: doit contenir une barre de navigation avec les ancres pour les différentes sections, un logo créé au préalable et une phrase d'accroche (ex: Bienvenue sur mon site de présentation).
+    Main:
+        -Section 1:
+            Présentation centrée.
+            La présentation doit contenir mes compétences, ma formation web et un lien "en savoir plus" ouvrant une page avec mon CV.
+        -Section 2:
+            Portfolio: doit contenir au moins 3 images de sites avec un effet de hover. En hover l'utilisateur doit voir une mini description du site avec les technologies employées et un lien pour accéder à une page détaillant le projet.
+        -Section 3:
+            Formulaire de contact: nom, prénom, adresse mail pour pourvoir répondre et une zone de texte pour le message.
+            IFrame faisant appel à un API pour me géolocaliser.
+    Footer:
+        Technologies utilisées pour faire le portfolio, mentions légales, lien linkedin et ©
+
+1 page description détaillée du projet:
+    Header: barre de navigation pour revenir a l'accueil ou naviguer vers un autre projet, le logo et le titre du projet.
+    Main:
+    - à gauche des screens du site sur différents supports. 
+    - à droite description détaillée du travaille effectué et technologies utilisées.
+    Footer:
+    - Technologies utilisées pour faire le portfolio, mentions légales, lien linkedin et GitHub, et ©
+
+1 page admin pour ajouter des projets contenant un formulaire d'ajout de projet dans la base de données avec authentification obligatoire.
+
+2: code couleur
+    couleurs principales: noir, rouge et blanc.
+
+3: technologies a employer
+    HTLM5 / CSS3 / JavaScript / PHP / PhpMyAdmin / Bootstrap 4 / Sass / Twig

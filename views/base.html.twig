@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="auteur" content="aurelienc">
+    <meta name="description" content="portfolio Aurelien Caillaud">
+    <meta name="keywords" content="Aurélien Caillaud, portfolio, développeur web, développeur web mobile, développeur, web, web mobile, mobile">
+    <meta name="twitter:card" content="Site portfolio de Aurélien Caillaud, Développeur Web" />
+    <meta name="twitter:site" content="@portfolio" />
+    <meta name="twitter:creator" content="Aurélien Caillaud" />
+    <meta property="og:url" content="https://aurelienc.promo-27.codeur.online/portfolio" />
+    <meta property="og:title" content="Aurélien Caillaud Portfolio" />
+    <meta property="og:description" content="Ce site est le portfolio de Aurélien Caillaud, Développeur Web / Mobile" />
+    <meta property="og:image" content="https://aurelienc.promo-27.codeur.online/portfolio/public/img/logo_AC.png" />
+    <link rel="icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS">
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr">
+    {% block link %}{% endblock %}
+    <link rel="stylesheet" href="public/css/main.css" type="text/css" />
+    <title>portfolio</title>
+</head>
+
+<body class="" data-spy="scroll" data-target="#scrollSpy" id="content">
+    <header id="home" >
+        <div id="navBar" class="container-fluid">
+            <nav class="row navbar navbar-expand-lg" id="scrollspy">
+                <button aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-target="#navbarTogglerDemo01" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" id="logo_lien" href="accueil">
+                        <img alt="mon logo" class="img-fluid" height="1302" id="logo_navbar" src="public/img/logo_ACnav.png"
+                            width"501">
+                    </a>
+                    <ul class="navbar-nav mt-2 mt-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="accueil#home">Accueil</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="accueil#presentation">Présentation</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="accueil#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  " href="accueil#contact">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Mes projets
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for projet in data %}
+                                    <a class="dropdown-item" href="{{ projet.nom }}">{{ projet.nom }}</a>
+                                {% endfor %}
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </nav>
+            {# <div class="triangle-down center">
+                    <p id="toggle" class="isDown">
+                        
+                    </p>
+                </div> #}
+        </div>
+        {% block header %}{% endblock %}
+    </header>
+    <main>
+        {% block contenu %}{% endblock %}
+    </main>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex col-md-5 align-items-center">
+                    <p>Copyright © (2019) Aurélien CAILLAUD</p>
+                </div>
+                <div class="col-md-7 d-flex justify-content-around align-items-center">
+                    <a href="mentions_legales">Mentions légales</a>
+                    <a href="https://github.com/Moustick2590" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aur%C3%A9lien-caillaud-1355a4177/" rel="noopener noreferrer"
+                        target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block script %}{% endblock %}
+</body>
+
+</html>

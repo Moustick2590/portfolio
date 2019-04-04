@@ -1,0 +1,412 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "graduate";
+  src: url(../fonts/graduate-regular.ttf) format("truetype");
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  font-family: "graduate", sans-serif;
+}
+body h2 {
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px) {
+  body h2 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  body .row {
+    margin: 0%;
+  }
+}
+body header {
+  background: #222;
+  background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+  background-size: 250% 100%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+body header #navBar {
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  height: 9vh;
+}
+body header #navBar .navbar {
+  background-color: rgba(205, 0, 0, 0.5);
+}
+@media only screen and (max-width: 991px) {
+  body header #navBar .navbar {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+body header #navBar .navbar #logo_lien {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 white;
+}
+body header #navBar .navbar #logo_lien #logo_navbar {
+  height: 7vh;
+}
+body header #navBar .navbar ul li .nav-link {
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(205, 0, 0, 0.5);
+  box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+body header #navBar .navbar ul li .nav-link:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(25, 0, 0, 0.8);
+}
+body header #navBar .navbar ul li .dropdown-menu {
+  background-color: rgba(205, 0, 0, 0.5);
+}
+body header #navBar .navbar ul li .dropdown-menu .dropdown-item {
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(205, 0, 0, 0.5);
+  box-shadow: inset 0.3rem 0.3rem 0.3rem 0 rgba(255, 130, 90, 0.2), 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+body header #navBar .navbar ul li .dropdown-menu .dropdown-item:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(25, 0, 0, 0.8);
+}
+body header #navBar .navbar .navbar-toggler {
+  margin: 3vh 0 0 1vh;
+  box-shadow: inset 0.3rem 0.3rem 0.3rem 0 rgba(255, 130, 90, 0.2), 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+}
+body header #navBar .navbar .navbar-toggler .navbar-toggler-icon {
+  border-color: black;
+  background-image: url(../img/logo_AC.png);
+  background-size: contain;
+}
+body header #navBar .center {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+@media only screen and (max-width: 991px) {
+  body header #navBar .center {
+    display: none;
+  }
+}
+body header #navBar .triangle-down {
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid transparent;
+}
+body header #navBar .triangle-down p {
+  text-align: center;
+  color: rgba(255, 130, 90, 0.5);
+  font-size: 1.5rem;
+  margin-top: -33px;
+  margin-left: -13px;
+  transition: color 0.2s;
+  text-shadow: 0 0.5rem 0.5rem rgba(255, 130, 90, 0.5), 0 1rem 0.5rem rgba(170, 90, 30, 0.5), 0 1rem 0.3rem rgba(128, 0, 0, 0.5);
+}
+body header #navBar .triangle-down p:hover {
+  color: white;
+}
+body header #logo_présentation {
+  min-height: 100vh;
+  padding: 5vh 0;
+}
+@media only screen and (min-width: 992px) {
+  body header #logo_présentation {
+    padding: 0;
+  }
+}
+body header #logo_présentation h1 {
+  font-size: 3.9rem;
+  font-weight: 800;
+  padding: 5vh 0;
+}
+@media only screen and (max-width: 991px) {
+  body header #logo_présentation h1 {
+    font-size: 3rem;
+    padding: 10vh 0;
+  }
+}
+body header #logo_présentation h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+@media only screen and (max-width: 991px) {
+  body header #logo_présentation h2 {
+    font-size: 2rem;
+  }
+}
+body header #logo_présentation #logo_accueil {
+  max-height: 75vh;
+}
+body #presentation {
+  padding: 10vh 0;
+  background: #222;
+  background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+  background-size: 200% 200%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+@media only screen and (max-width: 991px) {
+  body #presentation .compet {
+    padding: 10vh 0 0 0;
+  }
+}
+body #presentation a {
+  margin: 0.5rem 0;
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(205, 0, 0, 0.5);
+  box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+body #presentation a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(25, 0, 0, 0.8);
+}
+body #presentation p {
+  padding: 1rem 0 0 0;
+}
+body #presentation #competences {
+  list-style-type: none;
+  padding: 1rem 0;
+}
+body #portfolio {
+  padding: 10vh 0;
+  background: #222;
+  background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+  background-size: 200% 200%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+body #portfolio figure {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 5% 0;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #650000;
+  box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+  border-radius: 0.5rem;
+}
+body #portfolio figure:hover figcaption {
+  display: block;
+  transform: translateY(-100%);
+  transition: 0.3s ease-in-out;
+}
+body #portfolio figure figcaption {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(128, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+}
+body #portfolio figure figcaption ul {
+  list-style-type: none;
+}
+body #portfolio figure figcaption ul .nom_projet {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+body #portfolio figure figcaption ul .nom_projet h2 {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 991px) {
+  body #portfolio figure figcaption ul .nom_projet h2 {
+    font-size: 1.2rem;
+  }
+}
+body #portfolio figure figcaption ul .description_projet {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body #portfolio figure figcaption ul .contrib_projet {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body #portfolio figure figcaption ul .lien_page_projet {
+  margin: 0.5rem 0;
+}
+body #portfolio figure figcaption ul .lien_page_projet a {
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(205, 0, 0, 0.5);
+  box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+body #portfolio figure figcaption ul .lien_page_projet a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(25, 0, 0, 0.8);
+}
+body #projet {
+  min-height: 100vh;
+  padding: 15vh 0;
+  word-wrap: break-word;
+  background: #222;
+  background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+  background-size: 250% 100%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+body #projet .img_desktop {
+  margin: 5vh 0;
+  box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+}
+body #projet .img_responsive {
+  margin: 5vh 0;
+}
+body #projet .img_responsive .img_tablette {
+  box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+}
+body #projet .img_responsive .img_mobile {
+  box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+}
+body #projet ul {
+  list-style-type: none;
+}
+body #projet ul .nom_projet {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+body #projet ul .description_projet {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body #projet ul .contrib_projet {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body #projet ul .lien_projet {
+  margin: 5vh 0;
+}
+body #projet ul .lien_projet a {
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(205, 0, 0, 0.5);
+  box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+body #projet ul .lien_projet a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(25, 0, 0, 0.8);
+}
+body #form_map {
+  padding: 10vh 0;
+  background: #222;
+  background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+  background-size: 200% 200%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+body #form_map #map {
+  min-height: 50vh;
+  border-style: solid;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+}
+body #form_map #map a {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 white;
+  color: #350000;
+}
+body #form_map #map a:hover {
+  color: #350000;
+}
+body #form_map #contact {
+  margin-left: 0;
+}
+body #form_map #contact #nom,
+body #form_map #contact #sujet,
+body #form_map #contact #email,
+body #form_map #contact #message {
+  border-radius: 1rem;
+  width: 90%;
+  border-width: 0;
+}
+body #form_map #contact label {
+  margin-bottom: 0;
+  margin-top: 5%;
+}
+body #form_map #contact #message {
+  margin-bottom: 5%;
+}
+body #form_map #contact #envoi_mail {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 2.5% 10%;
+  background-color: #800000;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5em 0.2rem rgba(0, 0, 0, 0.2);
+  border-width: 0;
+}
+body #form_map #contact #envoi_mail:hover {
+  background-color: #450000;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  body #form_map #contact #envoi_mail {
+    margin-bottom: 7vh;
+  }
+}
+body footer {
+  background-color: #800000;
+  padding: 5vh 0;
+}
+body footer #tech h3 {
+  font-size: 1.2rem;
+}
+body footer #tech ul li {
+  list-style-type: none;
+}
+body footer a {
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+body footer a:hover {
+  color: black;
+  text-decoration: none;
+}
+body footer a i {
+  font-size: 3rem;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% block contenu %}
+    <section class="container-fluid">
+        <form action="accueil" class="container" enctype="multipart/form-data" id="form_add_projet" method="post">
+            <div class="row">
+                <label for="nom">Nom du projet :</label>
+                <input class="chmp" name="nom" type="text"><br>
+                <label for="contributeurs">Contributeurs :</label>
+                <input class="chmp" name="contributeurs" type="text"><br>
+            </div>
+            <div class="row">
+                <label for="lien">Liens projet en ligne :</label>
+                <input class="chmp" name="lien" type="text"><br>
+                <label for="techno">Technologies utilisées :</label>
+                <input class="chmp" name="techno" type="text"><br>
+            </div>
+            <div class="row">
+                <label for="description">Description :</label>
+                <input name="description" type="textarea"><br>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="img_desktop">Image format desktop :</label>
+                    <input name="img_desktop" type="file"/><br>
+                    <div id="preview_desktop"><img src="filed.png"/></div><br>
+                </div>
+                <div class="col-md-6">
+                    <label for="img_tablette">Image format tablette :</label>
+                    <input name="img_tablette" type="file"/><br>
+                    <div id="preview_tablette"><img src="filed.png"/></div><br>
+                </div>
+                <div class="col-md-6">
+                    <label for="img_mobile">Image format mobile :</label><br>
+                    <input name="img_mobile" type="file"/><br>
+                    <div id="preview_mobile"><img src="filed.png"/></div><br>
+                </div>
+            </div>
+            <div class="row">
+                <input class="btn btn-secondary col-md-6 offset-3" id="envoie" type="submit" value="Valider">
+            </div>
+        </form>
+        <div id="err"></div>
+    </section>
+{% endblock %}
+{% block script %}
+<script src="public/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="public/js/ajaxupload.js"></script>
+{% endblock %}

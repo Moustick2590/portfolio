@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'graduate';
+    src: url(../fonts/graduate-regular.ttf) format('truetype');
+}
+
+$fontTitres: 'graduate',
+sans-serif;
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    font-family: $fontTitres;
+
+    h2 {
+        font-weight: 600;
+
+        @media only screen and (max-width: 991px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .row {
+            margin: 0%;
+        }
+    }
+
+    header {
+        background: #222;
+        background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+        background-size: 250% 100%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+
+        #navBar {
+            position: fixed;
+            z-index: 9000;
+            top: 0;
+            height: 9vh;
+
+            .navbar {
+                background-color: rgba(205, 0, 0, 0.5);
+
+                @media only screen and (max-width: 991px) {
+                    background-color: rgba(0, 0, 0, 0);
+                }
+
+                #logo_lien {
+                    background-color: rgba(0, 0, 0, 0);
+                    box-shadow: 0 0 0 0 white;
+
+                    #logo_navbar {
+                        height: 7vh;
+
+                    }
+                }
+
+
+                ul li {
+                    .nav-link {
+                        color: white;
+                        font-size: 1.2rem;
+                        background-color: rgba(205, 0, 0, 0.5);
+                        box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+                        padding: 0.5rem;
+
+                        &:hover {
+                            color: white;
+                            text-decoration: none;
+                            background-color: rgba(25, 0, 0, 0.8);
+                        }
+                    }
+
+                    .dropdown-menu {
+                        background-color: rgba(205, 0, 0, 0.5);
+
+                        .dropdown-item {
+                            color: white;
+                            font-size: 1.2rem;
+                            background-color: rgba(205, 0, 0, 0.5);
+                            box-shadow: inset 0.3rem 0.3rem 0.3rem 0 rgba(255, 130, 90, 0.2), 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+                            padding: 0.5rem;
+
+                            &:hover {
+                                color: white;
+                                text-decoration: none;
+                                background-color: rgba(25, 0, 0, 0.8);
+                            }
+                        }
+                    }
+                }
+
+                .navbar-toggler {
+                    margin: 3vh 0 0 1vh;
+
+                    box-shadow: inset 0.3rem 0.3rem 0.3rem 0 rgba(255, 130, 90, 0.2), 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+
+                    .navbar-toggler-icon {
+                        border-color: rgba(0, 0, 0, 1);
+                        background-image: url(../img/logo_AC.png);
+                        background-size: contain;
+                    }
+
+                }
+
+
+            }
+
+            // .center {
+            //     margin: auto;
+            //     position: absolute;
+            //     left: 0;
+            //     right: 0;
+            //     top: 0;
+
+            //     @media only screen and (max-width: 991px) {
+            //         display: none;
+            //     }
+            // }
+
+            // .triangle-down {
+            //     position: fixed;
+            //     width: 0;
+            //     height: 0;
+            //     border-left: 30px solid transparent;
+            //     border-right: 30px solid transparent;
+            //     border-top: 30px solid transparent;
+
+            // }
+
+            // .triangle-down p {
+            //     text-align: center;
+            //     color: rgba(255, 130, 90, 0.5);
+            //     font-size: 1.5rem;
+            //     margin-top: -33px;
+            //     margin-left: -13px;
+            //     transition: color .2s;
+            //     text-shadow: 0 0.5rem 0.5rem rgba(255, 130, 90, 0.5), 0 1rem 0.5rem rgba(170, 90, 30, 0.5), 0 1rem 0.3rem rgba(128, 0, 0, 0.5);
+
+            //     &:hover {
+            //         color: white;
+            //     }
+            // }
+        }
+
+        #logo_présentation {
+            min-height: 100vh;
+            padding: 5vh 0;
+            @media only screen and (min-width: 992px) {
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 3.9rem;
+                font-weight: 800;
+                padding: 5vh 0;
+
+                @media only screen and (max-width: 991px) {
+                    font-size: 3rem;
+                    padding: 10vh 0;
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 800;
+
+                @media only screen and (max-width: 991px) {
+                    font-size: 2rem;
+                }
+            }
+
+            #logo_accueil {
+                max-height: 75vh;
+            }
+        }
+    }
+
+    #presentation {
+        padding: 10vh 0;
+        background: #222;
+        background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+        background-size: 200% 200%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+
+        .compet {
+
+            @media only screen and (max-width: 991px) {
+                padding: 10vh 0 0 0;
+            }
+        }
+
+        a {
+            margin: 0.5rem 0;
+            color: white;
+            font-size: 1.2rem;
+            background-color: rgba(205, 0, 0, 0.5);
+            box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+                background-color: rgba(25, 0, 0, 0.8);
+            }
+        }
+
+        p {
+            padding: 1rem 0 0 0;
+        }
+
+        #competences {
+            list-style-type: none;
+            padding: 1rem 0;
+        }
+    }
+
+    #portfolio {
+        padding: 10vh 0;
+        background: #222;
+        background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+        background-size: 200% 200%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+
+        figure {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            margin: 5% 0;
+            color: white;
+            font-size: 1.2rem;
+            background-color: #650000;
+            box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+            border-radius: .5rem;
+
+            &:hover figcaption {
+                display: block;
+                transform: translateY(-100%);
+                transition: .3s ease-in-out;
+            }
+
+            figcaption {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: white;
+                background: rgba(128, 0, 0, 0.8);
+                transition: .3s ease-in-out;
+
+                ul {
+                    list-style-type: none;
+
+                    .nom_projet {
+                        text-align: center;
+                        padding-top: 3%;
+                        padding-bottom: 2%;
+
+                        h2 {
+                            font-size: 1.5rem;
+
+                            @media only screen and (max-width: 991px) {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                    .description_projet {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .contrib_projet {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .lien_page_projet {
+                        margin: 0.5rem 0;
+
+                        a {
+                            color: white;
+                            font-size: 1.2rem;
+                            background-color: rgba(205, 0, 0, 0.5);
+                            box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+                            padding: 0.5rem;
+
+                            &:hover {
+                                color: white;
+                                text-decoration: none;
+                                background-color: rgba(25, 0, 0, 0.8);
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    #projet {
+        min-height: 100vh;
+        padding: 15vh 0;
+        word-wrap: break-word;
+        background: #222;
+        background: linear-gradient(90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+        background-size: 250% 100%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+
+        .img_desktop {
+            margin: 5vh 0;
+            box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+        }
+
+        .img_responsive {
+            margin: 5vh 0;
+
+            .img_tablette {
+                box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+            }
+
+            .img_mobile {
+                box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+
+            }
+        }
+
+
+        ul {
+            list-style-type: none;
+
+            .nom_projet {
+                text-align: center;
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            .description_projet {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .contrib_projet {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .lien_projet {
+                margin: 5vh 0;
+                a {
+                    
+                color: white;
+                font-size: 1.2rem;
+                background-color: rgba(205, 0, 0, 0.5);
+                box-shadow: 0.3rem 0.3rem 0.3em 0.2rem rgba(0, 0, 0, 0.2);
+                padding: 0.5rem;
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                    background-color: rgba(25, 0, 0, 0.8);
+                }
+                }
+                
+            }
+        }
+    }
+
+    #form_map {
+        padding: 10vh 0;
+        background: #222;
+        background: linear-gradient(-90deg, #800000, #650000, #550000, #450000, #350000, #250000, #150000, #000);
+        background-size: 200% 200%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+
+        #map {
+            min-height: 50vh;
+            border-style: solid;
+            border-radius: 1rem;
+            box-shadow: 0.3rem 0.3rem 0.5em 0.2rem rgba(255, 130, 90, 0.2);
+
+            a {
+                background-color: rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 white;
+                color: #350000;
+
+                &:hover {
+                    color: #350000;
+                }
+            }
+        }
+
+        #contact {
+            margin-left: 0;
+
+            #nom,
+            #sujet,
+            #email,
+            #message {
+                border-radius: 1rem;
+                width: 90%;
+                border-width: 0;
+            }
+
+            label {
+                margin-bottom: 0;
+                margin-top: 5%;
+            }
+
+            #message {
+                margin-bottom: 5%;
+            }
+
+            #envoi_mail {
+                font-weight: 600;
+                font-size: 1.3rem;
+                padding: 2.5% 10%;
+                background-color: #800000;
+                color: white;
+                border-radius: 1rem;
+                box-shadow: 0.5rem 0.5rem 0.5em 0.2rem rgba(0, 0, 0, 0.2);
+                border-width: 0;
+
+                &:hover {
+                    background-color: #450000;
+                    cursor: pointer;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 7vh;
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #800000;
+        padding: 5vh 0;
+
+        #tech {
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            ul li {
+                list-style-type: none;
+            }
+        }
+
+        a {
+
+            font-size: 1.2rem;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+
+            &:hover {
+                color: black;
+                text-decoration: none;
+            }
+
+            i {
+
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}

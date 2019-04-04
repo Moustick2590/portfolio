@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block contenu %}
+<section>
+<form method="post" action="ajout_projet" id="form_admin">
+    <p>
+        Nom d'utilisateur : <input type="text"  id="username" />
+        Mot de passe : <input type="password" name="password" id="password" />
+        <input type="submit" id="submit" value="Se connecter !" />
+    </p>
+</form>
+</section>
+{% endblock %}
+{% block script %}
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/ajaxlogin.js"></script>
+    <script src="public/js/navbar.js"></script>
+{% endblock %}
+

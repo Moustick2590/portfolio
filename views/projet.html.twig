@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+{% block contenu %}
+<section id="projet" class="conatiner-fluid d-flex align-items-center">
+    {% for projet in projet %}
+    <div class="container ">
+            <h2 class="text-center nom_projet">{{projet.nom}}</h2>
+        <div class="row align-items-center">
+            <div class="col-md-8" id="img_projet">
+                
+                    <img class="img-fluid img_desktop" src="public/img/{{projet.img_desktop}}" alt="image format desktop">
+                
+                <div class="row justify-content-between img_responsive">
+                    <div class="col-6 col-md-5">
+                    {% if projet.img_tablette != Null %}
+                    <img class="img-fluid img_tablette" src="public/img/{{projet.img_tablette}}" alt="image format tablette">
+                    {% endif %}
+                    </div>
+                    <div class="col-4 col-md-3">
+                    {% if projet.img_mobile != null %}
+                    <img class="img-fluid img_mobile" src="public/img/{{projet.img_mobile}}" alt="image format mobile">
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="description_projet">
+                <ul>
+                    <li class="description_projet">{{projet.description}}</li>
+                    <li class="contrib_projet">{{projet.contributeurs}}</li>
+                    <li class="techno_projet">{{projet.technologies}}</li>
+                    <li class="lien_projet"><a href="{{projet.lien}}" target="_blank">Aller visiter le site</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
+{% block script %}
+<script src="public/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+</script>
+{% endblock %}
